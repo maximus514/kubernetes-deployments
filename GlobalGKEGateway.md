@@ -187,3 +187,9 @@ spec:
 ```kubectl
 kubectl get gateway
 ```
+After deployment, it may take 5–10 minutes for the Gateway’s external IP to propagate and become accessible through Google Front Ends (GFEs).
+```
+maximus_dev@cloudshell:~/nginx-project (maximus-dev-01)$ kubectl get gateway
+NAME               CLASS                            ADDRESS          PROGRAMMED   AGE
+external-gateway   gke-l7-global-external-managed   35.227.205.148   True         8m45s
+```
