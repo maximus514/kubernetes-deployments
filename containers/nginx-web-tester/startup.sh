@@ -5,11 +5,8 @@ VMHOSTNAME=$(curl -s -H "Metadata-Flavor: Google" \
   http://metadata.google.internal/computeMetadata/v1/instance/hostname)
 
 DNSRESOLUTION=$(cat /etc/resolv.conf)
-
 PODHOSTNAME=$(cat /etc/hostname)
-
 IPADDRESS=$(cat /etc/hosts)
-
 Route=$(route)
 
 # Export for envsubst
