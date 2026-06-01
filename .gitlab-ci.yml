@@ -29,8 +29,6 @@ build-and-push:
   script:
     - cd containers/nginx-web-tester
 
-    - docker build \
-      -t northamerica-northeast1-docker.pkg.dev/$GCP_PROJECT_ID/docker-images/$IMAGE_NAME:$IMAGE_TAG .
+    - docker build -t northamerica-northeast1-docker.pkg.dev/$GCP_PROJECT_ID/docker-images/$IMAGE_NAME:$IMAGE_TAG .
 
-    - docker push \
-      northamerica-northeast1-docker.pkg.dev/$GCP_PROJECT_ID/docker-images/$IMAGE_NAME:$IMAGE_TAG
+    - docker push northamerica-northeast1-docker.pkg.dev/$GCP_PROJECT_ID/docker-images/$IMAGE_NAME:$IMAGE_TAG
