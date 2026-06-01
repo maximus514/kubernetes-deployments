@@ -24,11 +24,11 @@ build-and-push:
 
     - cat "$GCP_SERVICE_KEY"
     - gcloud auth activate-service-account --key-file="$GCP_SERVICE_KEY"
-    - gcloud auth configure-docker northamerica-northeast1-docker.pkg.dev --quiet
+    - gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
 
   script:
     - cd containers/nginx-web-tester
 
-    - docker build -t northamerica-northeast1-docker.pkg.dev/$GCP_PROJECT_ID/docker-images/$IMAGE_NAME:$IMAGE_TAG .
+    - docker build -t us-central1-docker.pkg.dev/$GCP_PROJECT_ID/nginx-repo/$IMAGE_NAME:$IMAGE_TAG .
 
-    - docker push northamerica-northeast1-docker.pkg.dev/$GCP_PROJECT_ID/docker-images/$IMAGE_NAME:$IMAGE_TAG
+    - docker push us-central1-docker.pkg.dev/$GCP_PROJECT_ID/nginx-repo/$IMAGE_NAME:$IMAGE_TAG
