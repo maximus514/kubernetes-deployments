@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: us-central1-docker.pkg.dev/project-a18c5455-e17b-4297-b3e/nginx-repo/nginx-image-red:tag1
+        image: us-central1-docker.pkg.dev/project-a18c5455-e17b-4297-b3e/nginx-repo/nginx-image-red:latest
         ports:
         - containerPort: 80
         resources:
